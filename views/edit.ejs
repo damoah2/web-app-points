@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Point</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="/javascripts/scripts.js"></script>
+</head>
+
+<body>
+    <h1>Edit Point</h1>
+    <form method="post" action="/edit/<%= point.id %>">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= point.name %>" required>
+        <label for="x">X:</label>
+        <input type="text" id="x" name="x" value="<%= point.x %>" required oninput="calculateDistances()">
+        <label for="y">Y:</label>
+        <input type="text" id="y" name="y" value="<%= point.y %>" required oninput="calculateDistances()">
+        <button type="submit">Save</button>
+        <button type="button" onclick="location.href='/delete/<%= point.id %>'">Delete</button>
+    </form>
+    <a href="/">Back</a>
+    <div id="distances">
+        <!-- Display nearest and farthest points -->
+    </div>
+</body>
+
+</html>
