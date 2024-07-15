@@ -11,3 +11,6 @@ This is a simple web application to manage points on a plane using Node.js, Expr
 ## Prerequisites
 - [Node.js](https://nodejs.org/)
 - [PostgreSQL](https://www.postgresql.org/)
+
+## Install dependencies
+npm install
